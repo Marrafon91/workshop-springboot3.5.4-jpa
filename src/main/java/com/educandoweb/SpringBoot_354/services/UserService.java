@@ -43,10 +43,9 @@ public class UserService {
 			throw new DatabaseException(e.getMessage());
 		}
 	}
-// Se o ID não existir, deleteById(id) não lança exceção.
-//
-// Ou seja: o catch (EmptyResultDataAccessException e) nunca é atingido, então o método termina normalmente → Spring retorna 204.
-// FORÇA O ERRO 404	
+// 	Se o ID não existir, deleteById(id) não lança exceção.
+// 	Ou seja: o catch (EmptyResultDataAccessException e) nunca é atingido, então o método termina normalmente → Spring retorna 204.
+// 	FORÇA O ERRO 404	
 //	public void delete(Long id) {
 //		if (!repository.existsById(id)) {
 //			throw new ResourceNotFoundException(id);
